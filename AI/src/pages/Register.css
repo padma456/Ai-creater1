@@ -1,0 +1,211 @@
+/* ================================
+   REGISTER PAGE
+================================ */
+
+.auth-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 80px);
+  padding: 45px 20px 65px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(124, 58, 237, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(168, 85, 247, 0.09),
+      transparent 35%
+    ),
+    #0c0b16;
+}
+
+/* Registration form card */
+
+.form-panel {
+  width: 100%;
+  max-width: 490px;
+  padding: 38px;
+  background: linear-gradient(145deg, #191529, #11101c);
+  border: 1px solid #352746;
+  border-radius: 22px;
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.3),
+    0 0 35px rgba(139, 92, 246, 0.06);
+  animation: registerFadeIn 0.5s ease;
+}
+
+@keyframes registerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+
+.form-panel .eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: #b69aff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.form-panel h1 {
+  margin: 0 0 26px;
+  color: #f8f5ff;
+  font-size: clamp(27px, 4vw, 34px);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+
+/* Form labels */
+
+.form-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+  color: #ded8ef;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Inputs and dropdown */
+
+.form-panel input,
+.form-panel select {
+  width: 100%;
+  min-height: 49px;
+  padding: 13px 14px;
+  color: #f5f3ff;
+  background: #0c0b16;
+  border: 1px solid #393047;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  transition:
+    border-color 0.25s,
+    box-shadow 0.25s,
+    background 0.25s;
+}
+
+.form-panel input::placeholder {
+  color: #777187;
+}
+
+.form-panel input:focus,
+.form-panel select:focus {
+  background: #100e1b;
+  border-color: #a078ff;
+  box-shadow: 0 0 0 3px rgba(160, 120, 255, 0.13);
+}
+
+.form-panel select {
+  cursor: pointer;
+}
+
+.form-panel select option {
+  color: #f5f3ff;
+  background: #171426;
+}
+
+/* Create account button */
+
+.form-panel .button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 8px;
+  padding: 13px 18px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.2);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s,
+    filter 0.25s;
+}
+
+.form-panel .button-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.35);
+}
+
+.form-panel .button-primary:active {
+  transform: translateY(0);
+}
+
+/* Login link */
+
+.form-foot {
+  margin: 24px 0 0;
+  color: #a7a3ba;
+  font-size: 13px;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.form-foot a {
+  color: #c4a7ff;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.form-foot a:hover {
+  color: #e0cfff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+  .auth-wrap {
+    min-height: calc(100vh - 65px);
+    padding: 30px 16px 45px;
+  }
+
+  .form-panel {
+    padding: 27px 21px;
+    border-radius: 17px;
+  }
+
+  .form-panel h1 {
+    font-size: 28px;
+  }
+
+  .form-panel label {
+    margin-bottom: 17px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .form-panel {
+    animation: none;
+  }
+
+  .form-panel input,
+  .form-panel select,
+  .form-panel .button-primary {
+    transition: none;
+  }
+}

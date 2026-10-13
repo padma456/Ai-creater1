@@ -1,0 +1,262 @@
+/* ================================
+   PROFILE PAGE LAYOUT
+================================ */
+
+.profile-layout {
+  display: grid;
+  grid-template-columns: 0.85fr 1.4fr;
+  align-items: start;
+  gap: 32px;
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: 55px 0 80px;
+  color: #f5f3ff;
+}
+
+/* ================================
+   PROFILE SUMMARY CARD
+================================ */
+
+.profile-summary {
+  position: sticky;
+  top: 30px;
+  padding: 35px 25px;
+  text-align: center;
+  background:
+    radial-gradient(
+      circle at top,
+      rgba(139, 92, 246, 0.16),
+      transparent 60%
+    ),
+    linear-gradient(145deg, #191529, #11101c);
+  border: 1px solid #352746;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.profile-avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 25px;
+  color: #e7d9ff;
+  background: linear-gradient(135deg, #7c3aed, #c084fc);
+  border: 4px solid #302044;
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.2);
+}
+
+.profile-summary .eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: #b69aff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.profile-summary h1 {
+  margin: 0 0 10px;
+  overflow-wrap: anywhere;
+  color: #f8f5ff;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.profile-summary > p:not(.muted) {
+  margin: 0 0 22px;
+  color: #b9b1cb;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Profile tag */
+
+.profile-summary .tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-bottom: 20px;
+  padding: 9px 13px;
+  color: #d6c5ff;
+  background: rgba(139, 92, 246, 0.12);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 30px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.profile-summary .tag svg {
+  color: #a78bfa;
+}
+
+.profile-summary .muted {
+  margin: 0;
+  padding-top: 18px;
+  color: #8f899f;
+  border-top: 1px solid #30283d;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* ================================
+   EDIT PROFILE FORM
+================================ */
+
+.profile-layout .form-panel {
+  width: 100%;
+  padding: 32px;
+  background: linear-gradient(145deg, #191529, #11101c);
+  border: 1px solid #352746;
+  border-radius: 20px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+.profile-layout .form-panel h2 {
+  margin: 0 0 28px;
+  color: #f8f5ff;
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+/* Labels */
+
+.profile-layout .form-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 21px;
+  color: #ded8ef;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Inputs and textarea */
+
+.profile-layout .form-panel input,
+.profile-layout .form-panel textarea {
+  width: 100%;
+  padding: 13px 14px;
+  color: #f5f3ff;
+  background: #0c0b16;
+  border: 1px solid #393047;
+  border-radius: 10px;
+  outline: none;
+  font-size: 14px;
+  line-height: 1.6;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.profile-layout .form-panel input {
+  min-height: 48px;
+}
+
+.profile-layout .form-panel textarea {
+  min-height: 115px;
+  resize: vertical;
+}
+
+.profile-layout .form-panel input:focus,
+.profile-layout .form-panel textarea:focus {
+  border-color: #a078ff;
+  box-shadow: 0 0 0 3px rgba(160, 120, 255, 0.13);
+}
+
+.profile-layout .form-panel textarea::placeholder,
+.profile-layout .form-panel input::placeholder {
+  color: #777187;
+}
+
+/* Save button */
+
+.profile-layout .button-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 49px;
+  margin-top: 5px;
+  padding: 13px 18px;
+  color: #fff;
+  background: linear-gradient(110deg, #7c3aed, #a855f7);
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 8px 22px rgba(124, 58, 237, 0.2);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.profile-layout .button-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(124, 58, 237, 0.35);
+}
+
+/* Saved message */
+
+.success-text {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  color: #86efac;
+  background: rgba(34, 197, 94, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.2);
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ================================
+   RESPONSIVE DESIGN
+================================ */
+
+@media (max-width: 800px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 35px 0 55px;
+  }
+
+  .profile-summary {
+    position: static;
+  }
+
+  .profile-layout .form-panel {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-layout {
+    width: 92%;
+  }
+
+  .profile-summary {
+    padding: 28px 20px;
+  }
+
+  .profile-summary h1 {
+    font-size: 24px;
+  }
+
+  .profile-layout .form-panel {
+    padding: 22px 18px;
+    border-radius: 15px;
+  }
+
+  .profile-layout .form-panel h2 {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .profile-layout .form-panel input,
+  .profile-layout .form-panel textarea,
+  .profile-layout .button-primary {
+    transition: none;
+  }
+}

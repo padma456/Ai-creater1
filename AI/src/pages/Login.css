@@ -1,0 +1,153 @@
+/* LOGIN PAGE */
+
+.auth-wrap {
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px 20px;
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(124, 58, 237, 0.12),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 80%,
+      rgba(168, 85, 247, 0.1),
+      transparent 35%
+    ),
+    #0c0b16;
+}
+
+/* LOGIN FORM PANEL */
+
+.form-panel {
+  width: 100%;
+  max-width: 460px;
+  padding: 38px;
+  background: rgba(21, 21, 34, 0.96);
+  border: 1px solid #302943;
+  border-radius: 22px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* HEADING */
+
+.form-panel .eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #c4b5fd;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.form-panel h1 {
+  margin: 0 0 12px;
+  color: #f5f3ff;
+  font-size: clamp(25px, 4vw, 32px);
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+
+.form-panel > .muted {
+  margin: 0 0 28px;
+  color: #a1a1b5;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* FORM LABELS */
+
+.form-panel label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-bottom: 20px;
+  color: #e5e1f2;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* INPUT FIELDS */
+
+.form-panel input {
+  width: 100%;
+  min-height: 47px;
+  padding: 12px 14px;
+  outline: none;
+  border: 1px solid #373149;
+  border-radius: 10px;
+  background: #100f1b;
+  color: #f5f3ff;
+  font-size: 14px;
+  font-weight: 400;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.form-panel input::placeholder {
+  color: #77748e;
+}
+
+.form-panel input:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.14);
+}
+
+/* LOGIN BUTTON */
+
+.form-panel .button-primary {
+  min-height: 48px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.full-width {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.form-panel button:hover {
+  filter: brightness(1.12);
+}
+
+/* REGISTER LINK */
+
+.form-foot {
+  margin: 24px 0 0;
+  color: #a1a1b5;
+  text-align: center;
+  font-size: 13px;
+}
+
+.form-foot a {
+  margin-left: 4px;
+  color: #c4b5fd;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.form-foot a:hover {
+  color: #e9d5ff;
+  text-decoration: underline;
+}
+
+/* MOBILE */
+
+@media (max-width: 520px) {
+  .auth-wrap {
+    padding: 30px 16px;
+  }
+
+  .form-panel {
+    padding: 27px 22px;
+    border-radius: 17px;
+  }
+
+  .form-panel h1 {
+    font-size: 26px;
+  }
+}

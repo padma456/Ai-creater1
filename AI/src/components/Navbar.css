@@ -1,0 +1,313 @@
+
+/* Main navbar */
+.cs-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background: rgba(12, 11, 22, 0.94);
+  border-bottom: 1px solid rgba(167, 139, 250, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.navbar-inner {
+  width: min(1440px, 100%);
+  min-height: 78px;
+  margin: 0 auto;
+  padding: 0 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+/* Brand */
+.cs-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  flex-shrink: 0;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.brand-symbol {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #ffffff;
+  background: linear-gradient(135deg, #8b5cf6, #6d28d9);
+  border: 1px solid rgba(196, 181, 253, 0.4);
+  border-radius: 13px;
+  box-shadow: 0 0 24px rgba(139, 92, 246, 0.3);
+}
+
+.brand-name {
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.8px;
+  white-space: nowrap;
+}
+
+.brand-ai {
+  margin-left: 5px;
+  color: #b69aff;
+  font-weight: 800;
+}
+
+/* Desktop links */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex: 1;
+}
+
+.cs-nav-link {
+  position: relative;
+  padding: 10px 11px;
+  color: #a5a0b8;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 9px;
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+.cs-nav-link:hover {
+  color: #ffffff;
+  background: rgba(139, 92, 246, 0.09);
+}
+
+.cs-nav-link.active {
+  color: #d8c7ff;
+  background: rgba(139, 92, 246, 0.14);
+}
+
+.cs-nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  bottom: 3px;
+  height: 2px;
+  border-radius: 5px;
+  background: #a78bfa;
+  box-shadow: 0 0 10px rgba(167, 139, 250, 0.7);
+}
+
+/* Login and signup */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  flex-shrink: 0;
+}
+
+.nav-login {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #d1cde0;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-login:hover {
+  color: #ffffff;
+}
+
+.nav-signup {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  color: #ffffff;
+  background: linear-gradient(110deg, #8b5cf6, #6d28d9);
+  border: 1px solid rgba(196, 181, 253, 0.3);
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 5px 22px rgba(109, 40, 217, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.nav-signup:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(139, 92, 246, 0.35);
+}
+
+.signup-arrow {
+  opacity: 0.75;
+}
+
+/* Mobile menu */
+.mobile-menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  padding: 0;
+  color: #ffffff;
+  background: #191629;
+  border: 1px solid #33294d;
+  border-radius: 11px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  display: none;
+}
+
+/* Tablet and mobile */
+@media (max-width: 1180px) {
+  .navbar-inner {
+    gap: 16px;
+    padding: 0 3%;
+  }
+
+  .brand-name {
+    font-size: 17px;
+  }
+
+  .desktop-nav {
+    gap: 1px;
+  }
+
+  .cs-nav-link {
+    padding: 10px 7px;
+    font-size: 11px;
+  }
+
+  .navbar-actions {
+    gap: 11px;
+  }
+
+  .nav-signup {
+    padding: 0 11px;
+  }
+}
+
+@media (max-width: 960px) {
+  .navbar-inner {
+    min-height: 72px;
+    padding: 0 5%;
+  }
+
+  .desktop-nav,
+  .navbar-actions {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 15px 5% 22px;
+    background: #100e1d;
+    border-top: 1px solid rgba(167, 139, 250, 0.12);
+    animation: navbar-slide-in 0.2s ease;
+  }
+
+  .mobile-nav-link {
+    padding: 13px 15px;
+    color: #b8b2cc;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.2s ease;
+  }
+
+  .mobile-nav-link:hover,
+  .mobile-nav-link.active {
+    color: #ffffff;
+    background: rgba(139, 92, 246, 0.15);
+  }
+
+  .mobile-nav-link.active {
+    border-left: 3px solid #a78bfa;
+  }
+
+  .mobile-nav-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(167, 139, 250, 0.12);
+  }
+
+  .mobile-nav-actions > a:first-child {
+    flex: 1;
+    padding: 13px;
+    color: #e9e5f5;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #39304f;
+    border-radius: 10px;
+  }
+
+  .mobile-nav-actions .nav-signup {
+    flex: 1;
+    min-height: 45px;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar-inner {
+    padding: 0 4%;
+  }
+
+  .brand-symbol {
+    width: 38px;
+    height: 38px;
+  }
+
+  .brand-name {
+    font-size: 16px;
+  }
+}
+
+@keyframes navbar-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cs-nav-link,
+  .nav-signup,
+  .mobile-nav-link {
+    transition: none;
+  }
+
+  .mobile-nav {
+    animation: none;
+  }
+}
